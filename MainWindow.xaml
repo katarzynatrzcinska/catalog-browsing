@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800">
+    <DockPanel HorizontalAlignment="Left" Width="790" Margin="0,0,0,1">
+        <Menu DockPanel.Dock="Top" HorizontalAlignment="Left" Width="790">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Open" Click="open_click"/>
+                <Separator />
+                <MenuItem Header="_Exit" Click="exit_click"/>
+            </MenuItem>
+        </Menu>
+        <TextBlock DockPanel.Dock="Bottom" Name="textBlock" Margin="0,427,0,0" Height="22" />
+        <TreeView  x:Name="treeView" Width="250" MouseRightButtonDown="OnPreviewMouseRightButtonDown" Margin="0,0,0,-422" SelectedItemChanged="treeView_SelectedItemChanged">
+            <TreeView.Resources>
+                <ContextMenu x:Key="TestMenu"/>
+            </TreeView.Resources>
+        </TreeView>
+        <TextBox x:Name="textBox" AcceptsReturn="True" Width="536" Margin="0,0,0,-422" TextWrapping="Wrap" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"/>
+    </DockPanel>
+</Window>

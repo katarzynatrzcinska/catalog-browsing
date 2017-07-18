@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApplication1.CreateDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="CreateDialog" Height="400" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="190*"/>
+            <RowDefinition Height="79*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="79*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="lblQuestion" Grid.ColumnSpan="2" Margin="0,0,0,158">Name:</Label>
+        <TextBox x:Name="textAnswer" Margin="32,32,23,188" Grid.ColumnSpan="2">Name</TextBox>
+        <RadioButton x:Name="createFile" Content="File" IsChecked="True" Grid.ColumnSpan="2" Margin="59,91,75,146" />
+        <RadioButton x:Name="createDirectory" Content="Directory" Grid.ColumnSpan="2" Margin="59,115,75,125" />
+        <CheckBox x:Name="readOnly" Margin="46,173,96,67" Content="ReadOnly" Grid.ColumnSpan="2" />
+        <CheckBox x:Name="archive" Margin="46,194,96,46" Content="Archive" Grid.ColumnSpan="2" />
+        <CheckBox x:Name="hidden" Margin="46,215,96,25" Content="Hidden" Grid.ColumnSpan="2" />
+        <CheckBox x:Name="system" Margin="46,236,96,4" Content="System" Grid.ColumnSpan="2" />
+        <Button Content="Ok" Margin="75,58,24,27" Grid.Row="1" Click="ok_click"/>
+        <Button Content="Cancel" Margin="0,58,75,27" Grid.Row="1" Grid.Column="1" Click="cancel_click"/>
+    </Grid>
+</Window>
